@@ -94,7 +94,7 @@ public class GeoCodeQualityService
     }
     
     /**
-     * Get the list of cities from a name and a validity date
+     * Get the list of cities from an exact name and a validity date
      * 
      * @param strNameCity
      *            the name of the city
@@ -106,6 +106,21 @@ public class GeoCodeQualityService
             throws Exception
     {
         return this._transportProvider.getListCitesByNameAndDate( strNameCity, dateRef );
+    }
+    
+    /**
+     * Get the list of cities from a name and a validity date
+     * 
+     * @param strNameCity
+     *            the name of the city
+     * @param dateRef
+     *            the date validity
+     * @return a list of cities  {@link IdentityDto}
+     */
+    public List<City> getListCitiesByNameAndDateLike( final String strNameCity, Date dateRef )
+            throws Exception
+    {
+        return this._transportProvider.getListCitesByNameAndDateLike( strNameCity, dateRef );
     }
 
 }
