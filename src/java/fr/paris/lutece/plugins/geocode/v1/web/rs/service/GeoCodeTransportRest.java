@@ -110,6 +110,21 @@ public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoC
         final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.CITIES_PATH;
         return _httpTransport.doGetList( url, mapParams,null,  City.class, _mapper );
     }
+    
+    /**
+     * {@inheritDoc }
+     */
+    @Override
+    public List<City> getListCitesByNameAndDateLike( final String strCityName, final Date dateRef ) throws Exception
+    {
+        _logger.debug( "Get list like City of name " + strCityName );
+        final Map<String, String> mapParams = new HashMap<>( );
+        mapParams.put( Constants.PARAM_SEARCH_NAME_CITY, strCityName );
+        mapParams.put( Constants.PARAM_DATE_VALIDITY, dateRef.toString( ) );
+
+        final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.CITIES_PATH + Constants.LIST_PATH;
+        return _httpTransport.doGetList( url, mapParams,null,  City.class, _mapper );
+    }
 
     /**
      * {@inheritDoc }

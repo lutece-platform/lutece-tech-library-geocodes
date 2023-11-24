@@ -5,6 +5,7 @@ public class Constants {
 	public static final String PROPERTY_APPLICATION_VERSION = "identitystore.version";
     public static final String VERSION_PATH_V1 = "/v1";
     public static final String CITIES_PATH = "/cities";
+    public static final String LIST_PATH = "/list";
     public static final String COUNTRIES_PATH = "/countries";
     public static final String DOWNLOAD_FILE_PATH = "/file";
     public static final String UPDATE_IDENTITY_PATH = "/update";

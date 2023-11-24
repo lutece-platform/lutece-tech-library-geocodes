@@ -58,7 +58,7 @@ public interface IGeoCodeTransportProvider
     City getCityByCodeAndDate( final String strCityCode, final Date dateRef ) throws Exception;
 
     /**
-     * Get list of cites by name and date.
+     * Get list of cites by exact name and date.
      *
      * @param strCityName
      *            The name of the city
@@ -80,4 +80,16 @@ public interface IGeoCodeTransportProvider
      * @throws Exception 
      */
     Country getCountryByCodeAndDate( final String strCountryCode, final Date dateRef ) throws Exception;
+
+    /**
+     * Get list of cites beginning with name and date.
+     *
+     * @param strCityName
+     *            The name of the city
+     * @param dateRef
+     *            the date of validity of the city
+     * @return String informations of the city
+     * @throws Exception 
+     */
+	List<City> getListCitesByNameAndDateLike(String strCityName, Date dateRef) throws Exception;
 }
