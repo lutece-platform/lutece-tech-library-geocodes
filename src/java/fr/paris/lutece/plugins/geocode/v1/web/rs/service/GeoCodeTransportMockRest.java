@@ -37,7 +37,6 @@ import fr.paris.lutece.plugins.geocode.v1.web.rs.dto.City;
 import fr.paris.lutece.plugins.geocode.v1.web.rs.dto.Country;
 import fr.paris.lutece.plugins.geocode.v1.web.rs.util.Constants;
 import fr.paris.lutece.plugins.geocode.v1.web.service.IGeoCodeTransportProvider;
-import fr.paris.lutece.plugins.geocode.v1.web.service.IHttpTransportProvider;
 import org.apache.log4j.Logger;
 
 import java.sql.Date;
@@ -56,10 +55,6 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
      * Logger
      */
     private static Logger _logger = Logger.getLogger( GeoCodeTransportMockRest.class );
-
-    /** URL for identityStore Quality REST service */
-    private String _strIdentityStoreQualityEndPoint;
-
 
     /**
      * {@inheritDoc }
@@ -155,19 +150,21 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
         }
         return countrymock;
     }
-    
-    /**
-     * {@inheritDoc }
-     */
-    public Country getCountryByNameAndDate( final String strCountryName, final Date dateRef )
-    {
-        
-        Country countrymock = new Country( );
+
+	@Override
+	public List<Country> getListCountriesByNameAndDate(String strCountryName, Date dateRef) throws Exception {
+		
+		List<Country> lstCountries = new ArrayList<>( );
+		
+		Country countrymock = new Country( );
         if ( strCountryName.startsWith( "FRA" ) )
         {
 		    countrymock.setCode("99100");
 		    countrymock.setValue("FRANCE");
         }
-        return countrymock;
-    }
+        
+        lstCountries.add( countrymock );
+        
+        return lstCountries;
+	}
 }

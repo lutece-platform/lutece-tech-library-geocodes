@@ -80,6 +80,18 @@ public interface IGeoCodeTransportProvider
      * @throws Exception 
      */
     Country getCountryByCodeAndDate( final String strCountryCode, final Date dateRef ) throws Exception;
+    
+    /**
+     * Get country by code and date.
+     *
+     * @param strCountryName
+     *            The name of the country
+     * @param dateRef
+     *            the date of validity of the country
+     * @return String informations of the country
+     * @throws Exception 
+     */
+    List<Country> getListCountriesByNameAndDate( final String strCountryName, final Date dateRef ) throws Exception;
 
     /**
      * Get list of cites beginning with name and date.

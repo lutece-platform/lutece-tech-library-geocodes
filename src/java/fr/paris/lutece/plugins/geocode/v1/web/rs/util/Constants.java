@@ -7,6 +7,7 @@ public class Constants {
     public static final String CITIES_PATH = "/cities";
     public static final String LIST_PATH = "/list";
     public static final String COUNTRIES_PATH = "/countries";
+    public static final String SEARCH_PATH = "/search";
     public static final String DOWNLOAD_FILE_PATH = "/file";
     public static final String UPDATE_IDENTITY_PATH = "/update";
     public static final String CREATE_IDENTITY_PATH = "/create";

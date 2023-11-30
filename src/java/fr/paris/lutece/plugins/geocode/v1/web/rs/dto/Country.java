@@ -15,9 +15,8 @@ public class Country implements Serializable
     // Variables declarations 
     private int _nId;
     
-    public static final String PATH_CODE = "code";
-    public static final String PATH_INTITULE_ENTIER = "intituleEntier";
-    public static final String PATH_INTITULE = "intitule";
+    public static final String ATTR_CODE = "code";
+    public static final String ATTR_LABEL = "value";
     
     private String _strCode;
     
@@ -47,7 +46,7 @@ public class Country implements Serializable
      * Returns the Code
      * @return The Code
      */
-    @JsonProperty( PATH_CODE )
+    @JsonProperty( ATTR_CODE )
     public String getCode( )
     {
         return _strCode;
@@ -57,7 +56,7 @@ public class Country implements Serializable
      * Sets the Code
      * @param strCode The Code
      */ 
-    @JsonProperty( PATH_CODE )
+    @JsonProperty( ATTR_CODE )
     public void setCode( String strCode )
     {
         _strCode = strCode;
@@ -68,7 +67,7 @@ public class Country implements Serializable
      * Returns the Value
      * @return The Value
      */
-    @JsonProperty( PATH_INTITULE_ENTIER )
+    @JsonProperty( ATTR_LABEL )
     public String getValue( )
     {
         return _strValue;
@@ -78,7 +77,7 @@ public class Country implements Serializable
      * Sets the Value
      * @param strValue The Value
      */ 
-    @JsonProperty( PATH_INTITULE_ENTIER )
+    @JsonProperty( ATTR_LABEL )
     public void setValue( String strValue )
     {
         _strValue = strValue;
