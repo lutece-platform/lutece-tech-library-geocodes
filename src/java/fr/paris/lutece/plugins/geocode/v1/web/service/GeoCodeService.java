@@ -37,6 +37,7 @@ import java.sql.Date;
 import java.util.List;
 
 import fr.paris.lutece.plugins.geocode.v1.web.rs.dto.City;
+import fr.paris.lutece.plugins.geocode.v1.web.rs.dto.Country;
 
 /**
  * Service regarding identity quality.
@@ -121,6 +122,12 @@ public class GeoCodeService
             throws Exception
     {
         return this._transportProvider.getListCitesByNameAndDateLike( strNameCity, dateRef );
+    }
+    
+    public List<Country> getListCountryByNameAndDate( final String strNameCountry, Date dateRef )
+    		throws Exception
+    {
+    	return this._transportProvider.getListCountriesByNameAndDate( strNameCountry, dateRef );
     }
 
 }

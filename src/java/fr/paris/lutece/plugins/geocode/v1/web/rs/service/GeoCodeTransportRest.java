@@ -140,4 +140,18 @@ public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoC
         final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.COUNTRIES_PATH + "/" + strCountryCode;
         return _httpTransport.doGet( url, mapParams,null,  Country.class, _mapper );
     }
+    
+    /**
+     * {@inheritDoc }
+     */
+    @Override
+    public List<Country> getListCountriesByNameAndDate( final String strCountryName, final Date dateRef ) throws Exception
+    {
+        _logger.debug( "Get Country of " + strCountryName );
+        final Map<String, String> mapParams = new HashMap<>( );
+        mapParams.put( Constants.PARAM_DATE_VALIDITY, dateRef.toString( ) );
+
+        final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.COUNTRIES_PATH  + Constants.SEARCH_PATH + "/" + strCountryName;
+        return _httpTransport.doGetList( url, mapParams,null,  Country.class, _mapper );
+    }
 }
