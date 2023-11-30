@@ -41,7 +41,7 @@ import fr.paris.lutece.plugins.geocode.v1.web.rs.dto.City;
 /**
  * Service regarding identity quality.
  */
-public class GeoCodeQualityService
+public class GeoCodeService
 {
 
     /** transport provider */
@@ -50,7 +50,7 @@ public class GeoCodeQualityService
     /**
      * Simple Constructor
      */
-    public GeoCodeQualityService( )
+    public GeoCodeService( )
     {
         super( );
     }
@@ -61,7 +61,7 @@ public class GeoCodeQualityService
      * @param transportProvider
      *            IIdentityQualityTransportProvider
      */
-    public GeoCodeQualityService( final IGeoCodeTransportProvider transportProvider )
+    public GeoCodeService( final IGeoCodeTransportProvider transportProvider )
     {
         super( );
         this._transportProvider = transportProvider;
