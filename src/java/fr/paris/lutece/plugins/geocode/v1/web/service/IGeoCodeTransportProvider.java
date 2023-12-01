@@ -33,7 +33,7 @@
  */
 package fr.paris.lutece.plugins.geocode.v1.web.service;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 import fr.paris.lutece.plugins.geocode.v1.web.rs.dto.City;

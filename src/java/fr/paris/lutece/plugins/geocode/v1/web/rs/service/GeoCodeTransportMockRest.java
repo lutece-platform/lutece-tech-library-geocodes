@@ -37,9 +37,11 @@ import fr.paris.lutece.plugins.geocode.v1.web.rs.dto.City;
 import fr.paris.lutece.plugins.geocode.v1.web.rs.dto.Country;
 import fr.paris.lutece.plugins.geocode.v1.web.rs.util.Constants;
 import fr.paris.lutece.plugins.geocode.v1.web.service.IGeoCodeTransportProvider;
+import fr.paris.lutece.util.date.DateUtil;
+
 import org.apache.log4j.Logger;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -119,6 +121,9 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
 	        citymock.setValue("Toulon");
 	        citymock.setValueMin("Toulon");
 	        citymock.setValueMinComplete("Toulon");
+	        
+	        citymock.setDateValidityEnd( DateUtil.parseIsoDate("2050-01-01 00:00:00") );
+	        citymock.setDateValidityStart( DateUtil.parseIsoDate("1943-01-01 00:00:00") );
 	        citymock.setCodeZone("83");
 	        
 	        City citymock2 = new City( );
@@ -127,6 +132,8 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
 	        citymock2.setValueMin("Toulonjac");
 	        citymock2.setValueMinComplete("Toulonjac");
 	        citymock2.setCodeZone("12");
+	        citymock2.setDateValidityEnd( DateUtil.parseIsoDate("2050-01-01 00:00:00") );
+	        citymock2.setDateValidityStart( DateUtil.parseIsoDate("1943-01-01 00:00:00") );
 	        
 	        lstCities.add( citymock );
 	        lstCities.add( citymock2 );
