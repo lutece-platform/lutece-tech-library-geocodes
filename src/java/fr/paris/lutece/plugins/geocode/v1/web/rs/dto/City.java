@@ -1,7 +1,7 @@
 package fr.paris.lutece.plugins.geocode.v1.web.rs.dto;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonProperty;

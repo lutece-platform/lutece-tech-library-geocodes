@@ -40,7 +40,7 @@ import fr.paris.lutece.plugins.geocode.v1.web.service.IGeoCodeTransportProvider;
 import fr.paris.lutece.plugins.geocode.v1.web.service.IHttpTransportProvider;
 import org.apache.log4j.Logger;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
