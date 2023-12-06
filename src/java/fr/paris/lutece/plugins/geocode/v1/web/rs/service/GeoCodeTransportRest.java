@@ -40,6 +40,7 @@ import fr.paris.lutece.plugins.geocode.v1.web.service.IGeoCodeTransportProvider;
 import fr.paris.lutece.plugins.geocode.v1.web.service.IHttpTransportProvider;
 import org.apache.log4j.Logger;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -50,7 +51,8 @@ import java.util.Map;
  */
 public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoCodeTransportProvider
 {
-
+	SimpleDateFormat df = new SimpleDateFormat( "yyyy-MM-DD" );
+	
     /**
      * Logger
      */
@@ -88,7 +90,7 @@ public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoC
     {
         _logger.debug( "Get City of " + strCityCode );
         final Map<String, String> mapParams = new HashMap<>( );
-        mapParams.put( Constants.PARAM_DATE_VALIDITY, dateRef.toString( ) );
+        mapParams.put( Constants.PARAM_DATE_VALIDITY, df.format( dateRef ) );
 
         //final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.QUALITY_PATH + "/" + Constants.RULES_PATH;
         final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.CITIES_PATH + "/" + strCityCode;
@@ -104,7 +106,7 @@ public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoC
         _logger.debug( "Get list City of name " + strCityName );
         final Map<String, String> mapParams = new HashMap<>( );
         mapParams.put( Constants.PARAM_SEARCH_NAME_CITY, strCityName );
-        mapParams.put( Constants.PARAM_DATE_VALIDITY, dateRef.toString( ) );
+        mapParams.put( Constants.PARAM_DATE_VALIDITY, df.format( dateRef ) );
 
         //final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.QUALITY_PATH + "/" + Constants.RULES_PATH;
         final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.CITIES_PATH;
@@ -120,7 +122,7 @@ public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoC
         _logger.debug( "Get list like City of name " + strCityName );
         final Map<String, String> mapParams = new HashMap<>( );
         mapParams.put( Constants.PARAM_SEARCH_NAME_CITY, strCityName );
-        mapParams.put( Constants.PARAM_DATE_VALIDITY, dateRef.toString( ) );
+        mapParams.put( Constants.PARAM_DATE_VALIDITY, df.format( dateRef ) );
 
         final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.CITIES_PATH + Constants.LIST_PATH;
         return _httpTransport.doGetList( url, mapParams,null,  City.class, _mapper );
@@ -134,7 +136,7 @@ public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoC
     {
         _logger.debug( "Get Country of " + strCountryCode );
         final Map<String, String> mapParams = new HashMap<>( );
-        mapParams.put( Constants.PARAM_DATE_VALIDITY, dateRef.toString( ) );
+        mapParams.put( Constants.PARAM_DATE_VALIDITY, df.format( dateRef ) );
 
         //final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.QUALITY_PATH + "/" + Constants.RULES_PATH;
         final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.COUNTRIES_PATH + "/" + strCountryCode;
@@ -149,7 +151,7 @@ public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoC
     {
         _logger.debug( "Get Country of " + strCountryName );
         final Map<String, String> mapParams = new HashMap<>( );
-        mapParams.put( Constants.PARAM_DATE_VALIDITY, dateRef.toString( ) );
+        mapParams.put( Constants.PARAM_DATE_VALIDITY, df.format( dateRef ) );
 
         final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.COUNTRIES_PATH  + Constants.SEARCH_PATH + "/" + strCountryName;
         return _httpTransport.doGetList( url, mapParams,null,  Country.class, _mapper );
