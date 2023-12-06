@@ -106,6 +106,7 @@ public class City implements Serializable
      * Returns the Value
      * @return The Value
      */
+    @JsonProperty( ATTR_LABEL )
     public String getValue( )
     {
         return _strValue;
@@ -115,6 +116,7 @@ public class City implements Serializable
      * Sets the Value
      * @param strValue The Value
      */ 
+    @JsonProperty( ATTR_LABEL )
     public void setValue( String strValue )
     {
         _strValue = strValue;
@@ -210,24 +212,6 @@ public class City implements Serializable
 	@JsonProperty( ATTR_LABEL_WITHOUT_ARTICLE )
 	public void setValueMin( String strValueMin ) {
 		this._strValueMin = strValueMin;
-	}
-
-	/**
-     * Returns the ValueMinComplete
-     * @return The ValueMinComplete
-     */
-	@JsonProperty( ATTR_LABEL )
-	public String getValueMinComplete( ) {
-		return _strValueMinComplete;
-	}
-
-	/**
-     * Sets the strValueMinComplete
-     * @param strValueMinComplete The strValueMinComplete
-     */
-	@JsonProperty( ATTR_LABEL )
-	public void setValueMinComplete( String strValueMinComplete ) {
-		this._strValueMinComplete = strValueMinComplete;
 	}
 
 	/**

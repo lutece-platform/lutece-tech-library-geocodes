@@ -74,7 +74,6 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
 	        citymock.setCode("01165");
 	        citymock.setValue("Francheleins");
 	        citymock.setValueMin("Francheleins");
-	        citymock.setValueMinComplete("Francheleins");
 	        citymock.setCodeZone("01");
         }
         return citymock;
@@ -96,7 +95,6 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
 	        citymock.setCode("83137");
 	        citymock.setValue("Toulon");
 	        citymock.setValueMin("Toulon");
-	        citymock.setValueMinComplete("Toulon");
 	        citymock.setCodeZone("83");
 	        
 	        lstCities.add( citymock );
@@ -120,7 +118,6 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
 	        citymock.setCode("83137");
 	        citymock.setValue("Toulon");
 	        citymock.setValueMin("Toulon");
-	        citymock.setValueMinComplete("Toulon");
 	        
 	        citymock.setDateValidityEnd( DateUtil.parseIsoDate("2050-01-01 00:00:00") );
 	        citymock.setDateValidityStart( DateUtil.parseIsoDate("1943-01-01 00:00:00") );
@@ -130,7 +127,6 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
 	        citymock2.setCode("12281");
 	        citymock2.setValue("Toulonjac");
 	        citymock2.setValueMin("Toulonjac");
-	        citymock2.setValueMinComplete("Toulonjac");
 	        citymock2.setCodeZone("12");
 	        citymock2.setDateValidityEnd( DateUtil.parseIsoDate("2050-01-01 00:00:00") );
 	        citymock2.setDateValidityStart( DateUtil.parseIsoDate("1943-01-01 00:00:00") );
@@ -148,7 +144,6 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
     	        citymock.setCode("03315");
     	        citymock.setValue("Villefranche");
     	        citymock.setValueMin("Villefranche");
-    	        citymock.setValueMinComplete("Villefranche");
     	        
     	        citymock.setDateValidityEnd( DateUtil.parseIsoDate("2000-01-01 00:00:00") );
     	        citymock.setDateValidityStart( DateUtil.parseIsoDate("1943-01-01 00:00:00") );
@@ -158,7 +153,6 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
     	        citymock2.setCode("06159");
     	        citymock2.setValue("Villefranche");
     	        citymock2.setValueMin("Villefranche");
-    	        citymock2.setValueMinComplete("Villefranche");
     	        citymock2.setCodeZone("06");
     	        citymock2.setDateValidityEnd( DateUtil.parseIsoDate("2000-01-01 00:00:00") );
     	        citymock2.setDateValidityStart( DateUtil.parseIsoDate("1943-01-01 00:00:00") );
@@ -167,7 +161,6 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
     	        citymock3.setCode("31582");
     	        citymock3.setValue("Villefranche");
     	        citymock3.setValueMin("Villefranche");
-    	        citymock3.setValueMinComplete("Villefranche");
     	        citymock3.setCodeZone("31");
     	        citymock3.setDateValidityEnd( DateUtil.parseIsoDate("2000-01-01 00:00:00") );
     	        citymock3.setDateValidityStart( DateUtil.parseIsoDate("1943-01-01 00:00:00") );
@@ -180,10 +173,8 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
     		{
     			City citymock = new City( );
     	        citymock.setCode("03315");
-    	        citymock.setValue("Villefranche-d'Allier");
     	        citymock.setValueMin("Villefranche-d'Allier");
-    	        citymock.setValueMinComplete("Villefranche-d'Allier");
-    	        
+    	        citymock.setValue("Villefranche-d'Allier");
     	        citymock.setDateValidityEnd( DateUtil.parseIsoDate("2050-01-01 00:00:00") );
     	        citymock.setDateValidityStart( DateUtil.parseIsoDate("2000-01-01 00:00:00") );
     	        citymock.setCodeZone("03");
@@ -192,7 +183,6 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
     	        citymock2.setCode("06159");
     	        citymock2.setValue("Villefranche-sur-Mer");
     	        citymock2.setValueMin("Villefranche-sur-Mer");
-    	        citymock2.setValueMinComplete("Villefranche-sur-Mer");
     	        citymock2.setCodeZone("06");
     	        citymock2.setDateValidityEnd( DateUtil.parseIsoDate("2050-01-01 00:00:00") );
     	        citymock2.setDateValidityStart( DateUtil.parseIsoDate("2000-01-01 00:00:00") );
@@ -201,7 +191,6 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
     	        citymock3.setCode("31582");
     	        citymock3.setValue("Villefranche-de-Lauragais");
     	        citymock3.setValueMin("Villefranche-de-Lauragais");
-    	        citymock3.setValueMinComplete("Villefranche-de-Lauragais");
     	        citymock3.setCodeZone("31");
     	        citymock3.setDateValidityEnd( DateUtil.parseIsoDate("2050-01-01 00:00:00") );
     	        citymock3.setDateValidityStart( DateUtil.parseIsoDate("2000-01-01 00:00:00") );
