@@ -75,6 +75,8 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
 	        citymock.setValue("Francheleins");
 	        citymock.setValueMin("Francheleins");
 	        citymock.setCodeZone("01");
+	        citymock.setDateValidityEnd( DateUtil.parseIsoDate("2000-01-01 00:00:00") );
+	        citymock.setDateValidityStart( DateUtil.parseIsoDate("1943-01-01 00:00:00") );
         }
         return citymock;
     }
