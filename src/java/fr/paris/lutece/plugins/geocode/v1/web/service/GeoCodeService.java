@@ -124,10 +124,30 @@ public class GeoCodeService
         return this._transportProvider.getListCitesByNameAndDateLike( strNameCity, dateRef );
     }
     
+    /**
+     * Get a list of country from name and date
+     * @param strNameCountry
+     * @param dateRef
+     * @return
+     * @throws Exception
+     */
     public List<Country> getListCountryByNameAndDate( final String strNameCountry, Date dateRef )
     		throws Exception
     {
     	return this._transportProvider.getListCountriesByNameAndDate( strNameCountry, dateRef );
+    }
+    
+    /**
+     * Get a country for a code and a name
+     * @param strCodeCountry
+     * @param dateRef
+     * @return
+     * @throws Exception
+     */
+    public Country getCountryByCodeAndDate( final String strCodeCountry, Date dateRef )
+    		throws Exception
+    {
+    	return this._transportProvider.getCountryByCodeAndDate( strCodeCountry, dateRef );
     }
 
 }
