@@ -85,9 +85,9 @@
     </dependencies>
 
     <scm>
-        <connection>scm:git:https://github.com/lutece-secteur-public/gru-library-identityquality.git</connection>
-        <developerConnection>scm:git:https://github.com/lutece-secteur-public/gru-library-identityquality.git</developerConnection>
-        <url>https://github.com/lutece-secteur-public/gru-library-identityquality.git</url>
+        <connection>scm:git:https://github.com/lutece-platform/lutece-tech-library-geocodes</connection>
+        <developerConnection>scm:git:https://github.com/lutece-platform/lutece-tech-library-geocodes</developerConnection>
+        <url>https://github.com/lutece-platform/lutece-tech-library-geocodes</url>
     </scm>
 
 </project>
