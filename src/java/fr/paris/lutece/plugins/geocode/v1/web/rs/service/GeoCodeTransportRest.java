@@ -40,6 +40,8 @@ import fr.paris.lutece.plugins.geocode.v1.web.service.IGeoCodeTransportProvider;
 import fr.paris.lutece.plugins.geocode.v1.web.service.IHttpTransportProvider;
 import org.apache.log4j.Logger;
 
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -153,7 +155,7 @@ public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoC
         final Map<String, String> mapParams = new HashMap<>( );
         mapParams.put( Constants.PARAM_DATE_VALIDITY, df.format( dateRef ) );
 
-        final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.COUNTRIES_PATH  + Constants.SEARCH_PATH + "/" + strCountryName;
+        final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.COUNTRIES_PATH  + Constants.SEARCH_PATH + "/" + URLEncoder.encode(strCountryName, StandardCharsets.UTF_8.toString());
         return _httpTransport.doGetList( url, mapParams,null,  Country.class, _mapper );
     }
 }
