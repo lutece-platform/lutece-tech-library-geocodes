@@ -53,7 +53,7 @@ import java.util.Map;
  */
 public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoCodeTransportProvider
 {
-	SimpleDateFormat df = new SimpleDateFormat( "yyyy-MM-DD" );
+	SimpleDateFormat df = new SimpleDateFormat( "yyyy-MM-dd" );
 	
     /**
      * Logger
@@ -94,8 +94,7 @@ public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoC
         final Map<String, String> mapParams = new HashMap<>( );
         mapParams.put( Constants.PARAM_DATE_VALIDITY, df.format( dateRef ) );
 
-        //final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.QUALITY_PATH + "/" + Constants.RULES_PATH;
-        final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.CITIES_PATH + "/" + strCityCode;
+        final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V2 + Constants.CITIES_PATH + "/" + strCityCode;
         return _httpTransport.doGet( url, mapParams,null,  City.class, _mapper );
     }
     
@@ -110,8 +109,7 @@ public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoC
         mapParams.put( Constants.PARAM_SEARCH_NAME_CITY, strCityName );
         mapParams.put( Constants.PARAM_DATE_VALIDITY, df.format( dateRef ) );
 
-        //final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.QUALITY_PATH + "/" + Constants.RULES_PATH;
-        final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.CITIES_PATH;
+        final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V2 + Constants.CITIES_PATH;
         return _httpTransport.doGetList( url, mapParams,null,  City.class, _mapper );
     }
     
@@ -126,7 +124,7 @@ public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoC
         mapParams.put( Constants.PARAM_SEARCH_NAME_CITY, strCityName );
         mapParams.put( Constants.PARAM_DATE_VALIDITY, df.format( dateRef ) );
 
-        final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.CITIES_PATH + Constants.LIST_PATH;
+        final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V2 + Constants.CITIES_PATH + Constants.LIST_PATH;
         return _httpTransport.doGetList( url, mapParams,null,  City.class, _mapper );
     }
 
@@ -140,8 +138,7 @@ public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoC
         final Map<String, String> mapParams = new HashMap<>( );
         mapParams.put( Constants.PARAM_DATE_VALIDITY, df.format( dateRef ) );
 
-        //final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.QUALITY_PATH + "/" + Constants.RULES_PATH;
-        final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.COUNTRIES_PATH + "/" + strCountryCode;
+        final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V2 + Constants.COUNTRIES_PATH + "/" + strCountryCode;
         return _httpTransport.doGet( url, mapParams,null,  Country.class, _mapper );
     }
     
@@ -155,7 +152,7 @@ public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoC
         final Map<String, String> mapParams = new HashMap<>( );
         mapParams.put( Constants.PARAM_DATE_VALIDITY, df.format( dateRef ) );
 
-        final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V1 + Constants.COUNTRIES_PATH  + Constants.SEARCH_PATH + "/" + URLEncoder.encode(strCountryName, StandardCharsets.UTF_8.toString());
+        final String url = _strIdentityStoreQualityEndPoint + Constants.VERSION_PATH_V2 + Constants.COUNTRIES_PATH  + Constants.SEARCH_PATH + "/" + URLEncoder.encode(strCountryName, StandardCharsets.UTF_8.toString());
         return _httpTransport.doGetList( url, mapParams,null,  Country.class, _mapper );
     }
 }

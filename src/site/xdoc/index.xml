@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
     <properties>
-        <title>Plugin librairy-identityquality</title>
+        <title>Plugin library-geocodes</title>
     </properties>
     <head>
         <!-- Keywords example : "cms, authentication, cms, workflow, seo, collaborative, ..." 
@@ -9,20 +9,29 @@
         <meta name="keywords" content="" />
     </head>
     <body>
-        <section name="Plugin librairy-identityquality">
+        <section name="Plugin library-geocodes">
             <!--
             <p>
                 <img src="images/librairy-identityquality.png" />
             </p>
             -->
             <subsection name="Introduction">
-                <p></p>
+                <p>The purpose of this library is to provide a service to call the plugin geocode </p>
             </subsection>
             <subsection name="Configuration">
-                <p></p>
+                <p>For the configuration, in the context.xml file, it is necessary ton inject the httpTransport bean.
+                You have also to fill the properties : APIM gateway url, AM token url, and credentials unless you use a direct access.
+                There is also a mock that can be used for test.
+                An example can be found in the context file of the plugin geocodesclient : 
+                https://github.com/lutece-platform/lutece-tech-plugin-geocodesclient/blob/master/webapp/WEB-INF/conf/plugins/geocodesclient_context.xml
+                </p>
+                <p>
+                Warning, the version 1.0.1 and before of the library use the date format yyyy-MM-DD and the V1 api of the plugin geocode which also use this
+                date format. From version 1.0.2, the date format is yyyy-MM-dd and the api version of the plugin geocodes is V2.  
+                </p>
             </subsection>
             <subsection name="Usage">
-                <p></p>
+                <p>The local service GeoCodeService can be used to request on the cities and countries</p>
             </subsection>
         </section>
     </body>

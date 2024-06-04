@@ -7,17 +7,17 @@
 
 ## Introduction
 
-The purpose of this library is to provide a service to call the plugin geocode
+Le but de cette librairie est de proposer un service qui appelle le plugin geocodes
 
 ## Configuration
 
-For the configuration, in the context.xml file, it is necessary ton inject the httpTransport bean. You have also to fill the properties : APIM gateway url, AM token url, and credentials unless you use a direct access.There is also a mock that can be used for test. An example can be found in the context file of the plugin geocodesclient :https://github.com/lutece-platform/lutece-tech-plugin-geocodesclient/blob/master/webapp/WEB-INF/conf/plugins/geocodesclient_context.xml
+Pour la configuration, dans le fichier context.xml, il est nécessaire d'injecter le bean httpTransport. Il est aussi nécessaire de remplir les propriétés suivantes : APIM gateway url, AM token url, and credentials, à moins$d'utiliser un accès direct. Un mock est également disponible pour les tests.Un exemple de configuration du context.xml peut être trouvé dans le plugin geocodesclient : https://github.com/lutece-platform/lutece-tech-plugin-geocodesclient/blob/master/webapp/WEB-INF/conf/plugins/geocodesclient_context.xml
 
-Warning, the version 1.0.1 and before of the library use the date format yyyy-MM-DD and the V1 api of the plugin geocode which also use this date format. From version 1.0.2, the date format is yyyy-MM-dd and the api version of the plugin geocodes is V2.
+Attention, les versions précédants la 1.0.2 utilise le format de date yyyy-MM-DD ainsi que l'api V1 du plugin geocodes. A partir de la version 1.0.2, le format de date utilisé est yyyy-MM-dd ainsi que l'api V2 du plugin geocodes.
 
 ## Usage
 
-The local service GeoCodeService can be used to request on the cities and countries
+Le service local GeoCodeService peut être utilisé pour requêter sur les villes et pays.
 
 
 [Maven documentation and reports](https://dev.lutece.paris.fr/plugins/library-geocodes/)
