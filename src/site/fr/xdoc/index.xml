@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
     <properties>
-        <title>Plugin librairy-identityquality</title>
+        <title>Plugin library-geocodes</title>
     </properties>
     <head>
         <!-- Keywords example : "cms, authentication, cms, workflow, seo, collaborative, ..." 
@@ -9,20 +9,30 @@
         <meta name="keywords" content="" />
     </head>
     <body>
-        <section name="Plugin librairy-identityquality">
+        <section name="Plugin library-geocodes">
             <!--
             <p>
                 <img src="images/librairy-identityquality.png" />
             </p>
             -->
             <subsection name="Introduction">
-                <p></p>
+                <p>Le but de cette librairie est de proposer un service qui appelle le plugin geocodes</p>
             </subsection>
             <subsection name="Configuration">
-                <p></p>
+                <p>Pour la configuration, dans le fichier context.xml, il est nécessaire d'injecter le bean httpTransport.
+                Il est aussi nécessaire de remplir les propriétés suivantes : APIM gateway url, AM token url, and credentials, à moins$
+                d'utiliser un accès direct.
+                Un mock est également disponible pour les tests.
+                Un exemple de configuration du context.xml peut être trouvé dans le plugin geocodesclient :
+                https://github.com/lutece-platform/lutece-tech-plugin-geocodesclient/blob/master/webapp/WEB-INF/conf/plugins/geocodesclient_context.xml
+                </p>
+                <p>
+                Attention, les versions précédants la 1.0.2 utilise le format de date yyyy-MM-DD ainsi que l'api V1 du plugin geocodes.
+                A partir de la version 1.0.2, le format de date utilisé est yyyy-MM-dd ainsi que l'api V2 du plugin geocodes.
+                </p>
             </subsection>
             <subsection name="Usage">
-                <p></p>
+                <p>Le service local GeoCodeService peut être utilisé pour requêter sur les villes et pays.</p>
             </subsection>
         </section>
     </body>
