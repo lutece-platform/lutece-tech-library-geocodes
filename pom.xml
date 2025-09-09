@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <parent>
@@ -42,11 +41,11 @@
         <dependency>
             <groupId>fr.paris.lutece.plugins</groupId>
             <artifactId>library-httpaccess</artifactId>
-            <version>[3.0.0-SNAPSHOT,)</version>
+            <version>[3.0.0-SNAPSHOT,3.9.9)</version>
             <type>jar</type>
         </dependency>
 
-        <!-- dépendance pour les tests -->
+        <!-- d&#233;pendance pour les tests -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
