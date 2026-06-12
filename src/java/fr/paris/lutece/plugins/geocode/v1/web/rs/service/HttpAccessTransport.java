@@ -45,7 +45,8 @@ import fr.paris.lutece.util.httpaccess.HttpAccess;
 import fr.paris.lutece.util.httpaccess.InvalidResponseStatus;
 import org.apache.hc.core5.http.HttpStatus;
 import org.apache.hc.core5.net.URIBuilder;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +57,7 @@ import java.util.Map;
  */
 public class HttpAccessTransport implements IHttpTransportProvider
 {
-    private static Logger _logger = Logger.getLogger( HttpAccessTransport.class );
+    private static Logger _logger = LogManager.getLogger( HttpAccessTransport.class );
 
     protected HttpAccess _httpClient;
     protected String _strEndPoint;

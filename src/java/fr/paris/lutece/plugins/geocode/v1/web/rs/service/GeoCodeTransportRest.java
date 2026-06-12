@@ -38,7 +38,8 @@ import fr.paris.lutece.plugins.geocode.v1.web.rs.dto.Country;
 import fr.paris.lutece.plugins.geocode.v1.web.rs.util.Constants;
 import fr.paris.lutece.plugins.geocode.v1.web.service.IGeoCodeTransportProvider;
 import fr.paris.lutece.plugins.geocode.v1.web.service.IHttpTransportProvider;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -58,7 +59,7 @@ public class GeoCodeTransportRest extends AbstractTransportRest implements IGeoC
     /**
      * Logger
      */
-    private static Logger _logger = Logger.getLogger( GeoCodeTransportRest.class );
+    private static Logger _logger = LogManager.getLogger( GeoCodeTransportRest.class );
 
     /** URL for identityStore Quality REST service */
     private String _strIdentityStoreQualityEndPoint;

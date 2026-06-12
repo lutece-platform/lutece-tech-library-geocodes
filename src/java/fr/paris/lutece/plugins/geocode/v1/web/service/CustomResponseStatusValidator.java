@@ -37,15 +37,11 @@ import fr.paris.lutece.util.httpaccess.ResponseStatusValidator;
 
 public class CustomResponseStatusValidator implements ResponseStatusValidator
 {
-    private static CustomResponseStatusValidator instance;
+    private static final CustomResponseStatusValidator INSTANCE = new CustomResponseStatusValidator( );
 
     public static CustomResponseStatusValidator getInstance( )
     {
-        if ( instance == null )
-        {
-            instance = new CustomResponseStatusValidator( );
-        }
-        return instance;
+        return INSTANCE;
     }
 
     private CustomResponseStatusValidator( )

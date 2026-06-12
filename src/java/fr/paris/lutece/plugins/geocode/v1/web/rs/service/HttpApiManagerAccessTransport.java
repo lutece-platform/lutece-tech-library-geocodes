@@ -37,10 +37,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import javax.ws.rs.core.HttpHeaders;
-import javax.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.HttpHeaders;
+import jakarta.ws.rs.core.MediaType;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -60,7 +61,7 @@ public final class HttpApiManagerAccessTransport extends HttpAccessTransport
     /** The Constant PARAMS_GRANT_TYPE_VALUE. */
     private static final String PARAMS_GRANT_TYPE_VALUE = "client_credentials";
 
-    private static Logger _logger = Logger.getLogger( HttpApiManagerAccessTransport.class );
+    private static Logger _logger = LogManager.getLogger( HttpApiManagerAccessTransport.class );
     private static final ObjectMapper _objectMapper = new ObjectMapper( );
 
     /** URL for REST service apiManager */

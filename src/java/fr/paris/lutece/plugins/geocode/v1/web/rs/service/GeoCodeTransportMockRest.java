@@ -39,7 +39,8 @@ import fr.paris.lutece.plugins.geocode.v1.web.rs.util.Constants;
 import fr.paris.lutece.plugins.geocode.v1.web.service.IGeoCodeTransportProvider;
 import fr.paris.lutece.util.date.DateUtil;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Date;
 import java.util.ArrayList;
@@ -56,7 +57,7 @@ public class GeoCodeTransportMockRest implements IGeoCodeTransportProvider
     /**
      * Logger
      */
-    private static Logger _logger = Logger.getLogger( GeoCodeTransportMockRest.class );
+    private static Logger _logger = LogManager.getLogger( GeoCodeTransportMockRest.class );
 
     /**
      * {@inheritDoc }
