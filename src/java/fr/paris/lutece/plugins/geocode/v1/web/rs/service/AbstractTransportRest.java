@@ -33,6 +33,8 @@
  */
 package fr.paris.lutece.plugins.geocode.v1.web.rs.service;
 
+import java.text.SimpleDateFormat;
+
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -55,6 +57,7 @@ public abstract class AbstractTransportRest
         // _mapper.enable( DeserializationFeature.UNWRAP_ROOT_VALUE );
         _mapper.disable( DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES );
         // _mapper.enable( SerializationFeature.WRAP_ROOT_VALUE );
+        _mapper.setDateFormat( new SimpleDateFormat( "yyyy-MM-dd" ) );
     }
 
     /**
